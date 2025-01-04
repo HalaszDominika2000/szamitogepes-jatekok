@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box; /*dobozok méretét állítja ebben az esetben körvonalas doboz*/
+}
+
+h1, p, th, td {
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10px; /*Betűméret beállítása*/
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: gray;
+
+}
+
+nav li a {
+    font-family: Arial, Verdana, sans-serif; 
+    color: beige;
+    font-size: 10px; /*Betűméret beállítása*/
+    margin: 0px; /*Külső margó*/
+    padding: 0px; /*Belső margó*/
+    
+}
+
+nav li {
+    text-decoration: none; /*Az aláhúzást szedi le*/
+}
+
+nav ul {
+    list-style-type: none; /*Felsorolás jelet szedi le*/
+    display: grid;
+    grid-template-columns: 90fr 90fr 90fr 90fr 90fr 90fr 90fr 90fr 90fr;
+    gap: 5px;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+}
+
+nav ul :hover { /* Ez abban az esetben kell ha a betű színe vagy a hátér színe változik abban az esetben ha felé viszem az egeret, aktivitás!!!*/
+    background-color: orange;
+}
+
+body {
+    background-image: url(kepek/black.png); /* Main és body esetén így állítjuk be a képet*/
+
+}
+
+main {
+    margin: auto; /*Középre kerül a main*/
+    width: 90%;
+    max-width: 900px; /*7.	A main elem ne lehessen nagyobb, mint 900px.*/
+    background-color: RGB(255, 255, 230);
+}
+
+header img {
+    width: 100%;
+    background-size:cover; /*Háttérkép méretet állít*/
+}
+
+article img {
+    width: 40%;
+}
+
+header {
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*rácsszerkezet*/
+main {
+    display: grid;
+    gap: 10px; /* Dobozok közé tesz szünetet*/
+    /* Terület neve */
+    grid-template-columns: 1fr 1fr;
+    /* Terület felosztás oszlop szerint*/
+    grid-template-areas:
+        "h h"
+        "n n"
+        "as ar"
+        "f f";
+    /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+
+}
+
+header {
+    grid-area: h;
+    /* Neveket adtunk, elneveztük */
+}
+
+nav {
+    grid-area: n;
+}
+
+aside {
+    grid-area: as;
+}
+
+article {
+    grid-area: ar;
+}
+
+footer {
+    grid-area: f;
+}
+
+/* Telefonos reszponzivitás*/
+@media only screen and (max-width: 600px) {
+
+    /* reszponzivitás beállítása, törés pontok kisebb képernyő esetén */
+    main {
+        display: grid;
+        /* Terület neve */
+        grid-template-columns: 1fr 1fr;
+        /* Terület felosztás oszlop szerint, egy részre oszlik a képernyő*/
+        grid-template-areas:
+            "h"
+            "n"
+            "as"
+            "ar"
+            "f";
+        /* Kinek mekkora területet adunk: Header, nav, footer teljes szélességében használja article, asside nem teljesen */
+        width: 150%;
+        max-width: 1000px;
+        /* Max szélesség */
+        margin: auto;
+        /* Margónak az állítása */
+        background-color: RGB(255, 255, 230);
+        /* Háttérszín */
+
+    }
+}
