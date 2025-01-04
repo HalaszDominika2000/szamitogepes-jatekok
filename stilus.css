@@ -2,17 +2,16 @@
     box-sizing: border-box; /*dobozok méretét állítja ebben az esetben körvonalas doboz*/
 }
 
-h1, p, th, td {
+h1, p, th, td, li {
     font-family: Arial, Verdana, sans-serif;
-    color: beige;
-    font-size: 10px; /*Betűméret beállítása*/
+    color: black;
+    font-size: 15px; /*Betűméret beállítása*/
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
 }
 
 nav {
-    background-color: gray;
-
+    background-color: rgb(40, 37, 37);
 }
 
 nav li a {
@@ -21,11 +20,14 @@ nav li a {
     font-size: 10px; /*Betűméret beállítása*/
     margin: 0px; /*Külső margó*/
     padding: 0px; /*Belső margó*/
+    text-decoration: none; /*Az aláhúzást szedi le*/
+    text-align: center;
+
     
 }
 
 nav li {
-    text-decoration: none; /*Az aláhúzást szedi le*/
+    border-right: 1px solid white; /*A navigációban a fehér vonalak*/
 }
 
 nav ul {
@@ -36,6 +38,8 @@ nav ul {
     margin: auto;
     height: 50px;
     text-align: center;
+    
+
 }
 
 nav ul :hover { /* Ez abban az esetben kell ha a betű színe vagy a hátér színe változik abban az esetben ha felé viszem az egeret, aktivitás!!!*/
@@ -60,15 +64,42 @@ header img {
 }
 
 article img {
-    width: 40%;
+    width: 90%;
 }
 
 header {
     height: 300px;
 }
 
+article {
+    text-align: justify; /* Szöveg sorkizárt kialakítása justifly*/
+    font-size: 10px; /* Betűméret: 18.	Az article elemben a bekezdések betű mérete legyen 10px!*/
+    float: right; /*20.	Az article elemen belül a kép ússzon el a szöveg mellé jobbra. */
+}
 
+article h1 {
+    font-size: 10px; /*18.	Az article elemben a bekezdések betű mérete legyen 10px!*/
+}
 
+footer {
+    text-align: center;
+    background-color: orange;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.aktiv {
+    background-color: orange;
+    padding: 15px;
+    
+}
+
+th, td {
+    border: 1px solid black;
+    
+}
 
 
 
@@ -86,7 +117,7 @@ main {
     display: grid;
     gap: 10px; /* Dobozok közé tesz szünetet*/
     /* Terület neve */
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     /* Terület felosztás oszlop szerint*/
     grid-template-areas:
         "h h"
